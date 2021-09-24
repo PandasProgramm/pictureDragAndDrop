@@ -1,0 +1,3 @@
+<select style="float: right" [(ngModel)]="selectedLanguage" (change)="changeLanguage($event)">
+  <option *ngFor="let language of languages">{{language}}</option>
+</select>

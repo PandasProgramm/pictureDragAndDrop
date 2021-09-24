@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root{
+  --blue-700: hsl(232, 30%, 11%);
+  --warn: #960018;
+  --blue-300: #44577C;
+
+  --gray-200: hsl(0, 0%, 97%);
+  --gray-400: hsl(0, 0%, 92%);
+  --gray-500: hsl(0, 0%, 87%);
+  --gray-700: hsl(0, 0%, 51%);
+
+  --pink-400: #F472B6;
+  --black: #000;
+
+  --fontSizeIcon-selectContent : 20px;
+  --fontSize: 15px;
+}
+
+.header{
+  --backgroundColor-Header: var(--blue-300);
+  --borderBottom-Header: 1px solid var(--blue-700);
+  --clHeadline-Header: var(--gray-700);
+  --height-Header: 50px;
+  --paddingTop: 10px;
+}
+mat-sidenav-container {
+  --height-snContainer: 100vh;
+  --cl-icon: var(--blue-700);
+
+//sidenav
+  --widthNavbar-content: 200px;
+  --marginLeft-content: 24px;
+  --borderSidenav-content: 1px solid var(--gray-200);
+  --paddingSideNav-content: 10px 0;
+  --paddingUlItem:0;
+  --marginUlItem: 0;
+  --heightListItem: 40px;
+  --paddingTopListItem: 15px;
+
+//hoverContainer
+  --widthHover-content: 25px;
+  --heightHover-content:100%;
+  --clBackgroundHover-content: var(--gray-500);
+//hover item
+  --widthHoverItem: 80px;
+  --bg-hoverListItem: var(--pink-400);
+}
+.tagInputFieldContent{
+
+  //cloudTagContent
+  --bg-tagInputFieldContent: var(--gray-400);
+  --minHeight-tagInputFieldContent: max-content;
+  --paddingBottom-tagInputFieldContent: 10px;
+  --width-tagInputFieldTextContent: 300px;
+  //areaContent
+  --patting-tagInputFieldAreaContent: 10px 25px 5px 24px;
+  --minHeight-tagInputFieldAreaContent: 100px;
+  --maxHeight-tagInputFieldAreaContent: max-content;
+  --borderTop-tagInputFieldAreaContent: 1px solid grey;
+  //textarea
+  --padding-tagInputFieldTextArea: 5px;
+  --width-tagInputFieldTextArea: 100%;
+  --minHeight-tagInputFieldTextArea: 100px;
+  --maxHeight-tagInputFieldTextArea: max-content;
+  --float-tagInputFieldTextArea: left;
+  --display-tagInputFieldTextArea: flex;
+  --flexWrap-tagInputFieldTextArea: wrap;
+  --bg-tagInputFieldTextArea: white;
+  --borderRadius-tagInputFieldTextArea: 5px;
+  //placeholder
+  --color-tagInputFieldPlaceHolder: grey;
+  --fontFamily-tagInputFieldPlaceHolder: 'Helvetica Neue', Helvetica, Arial, sans-serf, serif;
+  --fontSize-tagInputFieldPlaceHolder: 14px;
+  --position-tagInputFieldPlaceHolder: absolute;
+  //tag
+  --display-tagInputField: inline-block;
+  --borderRadius-tagInputField: 3px;
+  --padding-tagInputField: .4em 0.1em 0 0.5em;
+  --marginRight-tagInputField: 2px;
+  --marginBottom-tagInputField: 2px;
+  --border-tagInputField: 1px solid var(--blue-700);
+  --height-tagInputField: min-content;
+  --maxHeight-tagInputField: min-content;
+  --lineHeight-tagInputField: .8;
+  --background-tagInputField: var(--blue-300);
+  --color-tagInputField: var(--gray-200);
+  //matIcon
+  --fontSize-tagInputFieldIcon: 11px;
+  --textAlign-tagInputFieldIcon: center;
+  --paddingTop-tagInputFieldIcon: 1px;
+  --hover-tagInputFieldIcon: var(--warn);
+  //input
+  --padding-tagInputFieldInput: 0;
+  --margin-tagInputFieldInput: 0;
+  --min-width-tagInputFieldInput: 100px;
+  --max-width-tagInputFieldInput: min-content;
+  --display-tagInputFieldInput: flex;
+  --height-tagInputFieldInput: 20px;
+  --outline-tagInputFieldInput: none;
+  --border-tagInputFieldInput: none;
+}

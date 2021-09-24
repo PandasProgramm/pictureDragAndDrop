@@ -1,0 +1,20 @@
+<div class="addPicture container mx:auto">
+  <h2 class="headline">{{'addPicture.headline'|translate}}</h2>
+  <form [formGroup]="formGroup" >
+    <mat-form-field>
+      <label for="title">{{'addPicture.title'|translate}}</label>
+      <input MatFormFieldControl matInput formControlName="title" id="title">
+    </mat-form-field>
+    <mat-form-field>
+      <label for="description">{{'addPicture.description'|translate}}</label>
+      <textarea MatFormFieldControl matInput formControlName="description" id="description"></textarea>
+    </mat-form-field>
+    <ngx-dropzone [multiple]="false" (change)="onSelect($event)">
+      <ngx-dropzone-label>{{'addPicture.dropZone'}}</ngx-dropzone-label>
+      <ngx-dropzone-preview [removable]="true" (removed)="onRemove($event)">
+        <ngx-dropzone-label *ngIf="linkData">{{linkData.name}}({{linkData.type}})</ngx-dropzone-label>
+      </ngx-dropzone-preview>
+    </ngx-dropzone>
+    <app-tags (pushTags)="tags=$event"></app-tags>
+  </form>
+</div>

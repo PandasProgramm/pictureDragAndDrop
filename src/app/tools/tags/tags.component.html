@@ -1,0 +1,20 @@
+<div class="tagInputFieldContent">
+  <div class="areaContent">
+    <div class="textarea" (click)="onClick(inputValue)">
+    <span class="placeHolder"
+          *ngIf="tags.length === 0 && inputValue.length === 0">
+      {{'new entry'}}
+    </span>
+      <div *ngFor="let tag of tags" class="tag">
+        <span>{{tag}}</span>
+        <mat-icon (click)="remove(tag)">cancel</mat-icon>
+      </div>
+      <input type="text" id="input"
+             [style.color]="isValid ? 'red': 'black'"
+             [(ngModel)]="inputValue"
+             (keydown)="add(inputValue, $event)"
+             (click)="addTag(inputValue)"
+             #inputElement>
+    </div>
+  </div>
+</div>

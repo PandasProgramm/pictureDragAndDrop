@@ -1,0 +1,24 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    [autoFocus]="false"
+    [(opened)]="isOpen"
+    (mouseleave)="isOpen= false">
+    <h4 class="navHeadline">Start</h4>
+    <ul class="ulItem">
+      <li class="listItem" *ngFor="let item of navBarItems" [routerLink]="item.routerLink">
+        {{item.value}}
+      </li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="hoverItem"
+         (mouseenter)="isOpen = true">
+      <div class="hover">
+        <mat-icon>reorder</mat-icon>
+      </div>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

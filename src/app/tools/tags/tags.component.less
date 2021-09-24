@@ -1,0 +1,70 @@
+.tagInputFieldContent {
+
+  background-color: var(--bg-tagInputFieldContent);
+  min-height: var(--minHeight-tagInputFieldContent);
+  padding-bottom: var(--paddingBottom-tagInputFieldContent);
+  width: var(--width-tagInputFieldTextContent);
+  overflow-y: auto;
+
+  .areaContent {
+    padding: var(--patting-tagInputFieldAreaContent);
+    min-height: var(--minHeight-tagInputFieldAreaContent);
+    max-height: var(--maxHeight-tagInputFieldAreaContent);
+    border-top: var(--borderTop-tagInputFieldAreaContent);
+  }
+  .textarea{
+    padding: var(--padding-tagInputFieldTextArea);
+    width: var(--width-tagInputFieldTextArea);
+    min-height: var(--minHeight-tagInputFieldTextArea);
+    max-height: var(--maxHeight-tagInputFieldTextArea);
+    float: var(--float-tagInputFieldTextArea);
+    display: var(--display-tagInputFieldTextArea);
+    flex-wrap: var(--flexWrap-tagInputFieldTextArea);
+    background-color: var(--bg-tagInputFieldTextArea);
+    border-radius: var(--borderRadius-tagInputFieldTextArea);
+    overflow-x: hidden;
+    cursor: text;
+
+    .placeHolder {
+      color: var(--color-tagInputFieldPlaceHolder);
+      font-family: var(--fontFamily-tagInputFieldPlaceHolder);
+      font-size: var(--fontSize-tagInputFieldPlaceHolder);
+      position: var(--position-tagInputFieldPlaceHolder);
+    }
+
+    .tag{
+      display: var(--display-tagInputField);
+      border-radius: var(--borderRadius-tagInputField);
+      padding: var(--padding-tagInputField);
+      margin-right: var(--marginRight-tagInputField);
+      margin-bottom: var(--marginBottom-tagInputField);
+      border: var(--border-tagInputField);
+      height: var(--height-tagInputField);
+      max-height:var(--maxHeight-tagInputField);
+      line-height: var(--lineHeight-tagInputField);
+      background: var(--background-tagInputField);
+      color: var(--color-tagInputField);
+    }
+    mat-icon{
+      font-size: var(--fontSize-tagInputFieldIcon);
+      text-align: var(--textAlign-tagInputFieldIcon);
+      cursor: pointer;
+      padding-top: var(--paddingTop-tagInputFieldIcon);
+
+      &:hover{
+        color: var(--hover-tagInputFieldIcon);
+      }
+    }
+
+    input {
+      padding: var(--padding-tagInputFieldInput);
+      margin: var(--margin-tagInputFieldInput);
+      min-width: var(--min-width-tagInputFieldInput);
+      max-width: var(--max-width-tagInputFieldInput);
+      display: var(--display-tagInputFieldInput);
+      height: var(--height-tagInputFieldInput);
+      outline: var(--outline-tagInputFieldInput);
+      border: var(--border-tagInputFieldInput);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "pictures": [
+    {
+      "id": 1,
+      "title": "xyz",
+      "description": "lorem ipsum",
+      "linkData": "xyz",
+      "tags": ["a", "b", "c"]
+    }
+  ]
+}

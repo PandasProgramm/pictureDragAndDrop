@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "title": "Willkommen"
+  },
+  "gallery": {
+    "menueTitle": "Gallerie",
+    "addPicture": "Bild hinzufügen",
+    "slideMode": "Slide Modus",
+    "editMode": "Bearbeitungsmodus"
+  },
+  "addPicture": {
+    "headline": "Bild hinzufügen",
+    "title": "Titel",
+    "description": "Beschreibung",
+    "dropZone": "Ziehen Sie Ihr rein"
+  }
+}

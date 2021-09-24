@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "title": "Welcome"
+  },
+  "gallery": {
+    "menueTitle": "Gallery",
+    "addPicture": "add picture",
+    "slideMode": "Slide mode",
+    "editMode": "edit mode"
+  },
+  "addPicture": {
+    "headline": "Bild hinzufügen",
+    "title": "title",
+    "description": "description",
+    "dropZone": "drop your picture in this area"
+  }
+}

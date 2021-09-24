@@ -1,0 +1,9 @@
+<mat-toolbar>
+  <span>{{'gallery.menueTitle'|translate}}</span>
+  <div class="menue">
+    <span class="navItem" [routerLink]="'addPicture'">{{'gallery.addPicture'|translate}}</span>
+    <span class="navItem">{{'gallery.slideMode'|translate}}</span>
+    <span class="navItem">{{'gallery.editMode'|translate}}</span>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

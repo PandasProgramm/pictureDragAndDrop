@@ -3,7 +3,7 @@
     <div class="textarea" (click)="onClick(inputValue)">
     <span class="placeHolder"
           *ngIf="tags.length === 0 && inputValue.length === 0">
-      {{'new entry'}}
+      {{'tag.placeholder'|translate}}
     </span>
       <div *ngFor="let tag of tags" class="tag">
         <span>{{tag}}</span>
@@ -16,5 +16,6 @@
              (click)="addTag(inputValue)"
              #inputElement>
     </div>
+    <mat-icon style="float: right" (click)="onRemove()">delete</mat-icon>
   </div>
 </div>

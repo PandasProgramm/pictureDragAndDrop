@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './features/home/home.component';
@@ -15,14 +14,19 @@ import {materials} from './shared/materials/materials';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TagsComponent } from './tools/tags/tags.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { AddPictureComponent } from './tools/add-picture/add-picture.component';
+import { AddPictureComponent } from './features/add-picture/add-picture.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {NgxDropzoneModule} from 'ngx-dropzone';
+import {MatButtonModule} from '@angular/material/button';
+
+import {environment} from '../environments/environment';
+import {AngularFirestoreModule, SETTINGS} from '@angular/fire/compat/firestore';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireAnalyticsModule} from '@angular/fire/compat/analytics';
 
 
 @NgModule({
@@ -42,6 +46,9 @@ import {NgxDropzoneModule} from 'ngx-dropzone';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule,
     appRouting,
     ...materials,
     HttpClientModule,
@@ -58,9 +65,10 @@ import {NgxDropzoneModule} from 'ngx-dropzone';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    NgxDropzoneModule
+    NgxDropzoneModule,
+    MatButtonModule
   ],
-  providers: [],
+  providers: [{provide: SETTINGS, useValue: { }}],
   bootstrap: [AppComponent]
 })
 export class AppModule {

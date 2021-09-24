@@ -1,0 +1,39 @@
+.addPicture {
+  background-color: var(--gray-500);
+  width: 500px;
+  color: #000;
+  padding: 16px 16px 55px;
+  margin: 5rem auto;
+  border-radius: 3px;
+
+  .headline {
+    text-align: center;
+  }
+  .form{
+    height: 100%;
+    mat-form-field{
+      width: 100%;
+
+      #description{
+        resize: none;
+        height: 50px;
+      }
+    }
+
+    ngx-dropzone {
+      margin-top: 10px;
+    }
+    .previewDropDown{
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .submitButton {
+      float: right;
+      margin-top: 5px;
+      &:disabled {
+        background-color: aliceblue;
+        color: var(--gray-500);
+      }
+    }
+  }
+}

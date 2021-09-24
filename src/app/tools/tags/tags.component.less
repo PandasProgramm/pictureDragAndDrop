@@ -1,16 +1,26 @@
 .tagInputFieldContent {
 
-  background-color: var(--bg-tagInputFieldContent);
   min-height: var(--minHeight-tagInputFieldContent);
   padding-bottom: var(--paddingBottom-tagInputFieldContent);
   width: var(--width-tagInputFieldTextContent);
+  background-color: var(--bg-tagInputFieldTextArea);
+  border-radius: var(--borderRadius-tagInputFieldTextArea);
   overflow-y: auto;
+  margin-top: var(--marginTop-tagInputFieldContent);
+
+  mat-icon {
+    float: right;
+    cursor: pointer;
+    &:hover{
+      color: var(--matIconHoverTagRemove);
+    }
+  }
 
   .areaContent {
     padding: var(--patting-tagInputFieldAreaContent);
     min-height: var(--minHeight-tagInputFieldAreaContent);
     max-height: var(--maxHeight-tagInputFieldAreaContent);
-    border-top: var(--borderTop-tagInputFieldAreaContent);
+
   }
   .textarea{
     padding: var(--padding-tagInputFieldTextArea);
@@ -20,8 +30,6 @@
     float: var(--float-tagInputFieldTextArea);
     display: var(--display-tagInputFieldTextArea);
     flex-wrap: var(--flexWrap-tagInputFieldTextArea);
-    background-color: var(--bg-tagInputFieldTextArea);
-    border-radius: var(--borderRadius-tagInputFieldTextArea);
     overflow-x: hidden;
     cursor: text;
 
@@ -67,4 +75,7 @@
       border: var(--border-tagInputFieldInput);
     }
   }
+}
+.foo(@a) {
+  border-bottom: 1px solid @a;
 }

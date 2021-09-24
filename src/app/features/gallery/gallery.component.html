@@ -6,4 +6,12 @@
     <span class="navItem">{{'gallery.editMode'|translate}}</span>
   </div>
 </mat-toolbar>
+
+<div *ngIf="images$|async as images">
+  <div *ngFor="let image of images">
+    <span>{{image.title}}</span>
+  </div>
+</div>
+
+
 <router-outlet></router-outlet>

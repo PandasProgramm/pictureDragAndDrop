@@ -3,7 +3,7 @@ import {HomeComponent} from '../../features/home/home.component';
 import {SettingsComponent} from '../../features/settings/settings.component';
 import {GalleryComponent} from '../../features/gallery/gallery.component';
 import {PageNotFoundComponent} from '../../features/page-not-found/page-not-found.component';
-import {AddPictureComponent} from '../../tools/add-picture/add-picture.component';
+import {AddPictureComponent} from '../../features/add-picture/add-picture.component';
 
 const routes: Routes =
   [

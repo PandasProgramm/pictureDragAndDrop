@@ -1,0 +1,28 @@
+<div class="addPicture container mx:auto">
+  <h2 class="headline">{{'addPicture.headline'|translate}}</h2>
+  <form *ngIf="formGroup" [formGroup]="formGroup" class="form" (ngSubmit)="onPush()">
+    <mat-form-field *ngIf="formGroup.get('title')">
+      <label for="title">{{'addPicture.title'|translate}}</label>
+      <input matInput formControlName="title" id="title">
+      <mat-error *ngIf="formGroup.get('title')?.invalid &&formGroup.get('title')?.touched ||formGroup.get('title')?.dirty">
+        {{'addPicture.errorTitle'|translate}}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <label for="description">{{'addPicture.description'|translate}}</label>
+      <textarea matInput formControlName="description" id="description"></textarea>
+      <mat-error *ngIf="formGroup.get('description')?.invalid &&formGroup.get('description')?.touched ||formGroup.get('description')?.dirty">
+        {{'addPicture.errorTitle'|translate}}
+      </mat-error>
+    </mat-form-field>
+    <ngx-dropzone [multiple]="false" [accept]="'image/*'" (change)="onSelect($event)">
+      <ngx-dropzone-label>{{'addPicture.dropZone'|translate}}</ngx-dropzone-label>
+      <ngx-dropzone-preview *ngIf="image" ngProjectAs="ngx-dropzone-preview" class="previewDropDown" [file]="image" [removable]="true" (removed)="onRemove()">
+        <ngx-dropzone-label *ngIf="image">{{image.name}}({{image.type}})</ngx-dropzone-label>
+      </ngx-dropzone-preview>
+    </ngx-dropzone>
+    <app-tags (pushTags)="tags=$event"></app-tags>
+    <button type="submit" [disabled]="isValid()" class="submitButton" mat-raised-button color="primary">{{'addPicture.submit'|translate}}</button>
+  </form>
+</div>
+

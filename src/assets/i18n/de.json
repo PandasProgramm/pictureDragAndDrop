@@ -10,8 +10,13 @@
   },
   "addPicture": {
     "headline": "Bild hinzufügen",
-    "title": "Titel",
-    "description": "Beschreibung",
-    "dropZone": "Ziehen Sie Ihr rein"
+    "title": "Titel:",
+    "errorTitle": "*Pflichtfeld min. 5 Buchstaben",
+    "description": "Beschreibung:",
+    "dropZone": "Ziehen Sie Ihr Bild hier rein",
+    "submit": "hinzufügen"
+  },
+  "tag": {
+    "placeholder": "neuer Eintrag"
   }
 }

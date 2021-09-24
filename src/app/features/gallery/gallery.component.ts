@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Image} from '../../shared/models/image';
+import {RestApiService} from '../../shared/rest-api.service';
+import {DomSanitizer} from '@angular/platform-browser';
+import {map} from "rxjs/operators";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-gallery',
@@ -7,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
 
+  images$: Observable<Image[]> | undefined;
+  constructor(private api: RestApiService) { }
   ngOnInit(): void {
+
   }
+
 
 }

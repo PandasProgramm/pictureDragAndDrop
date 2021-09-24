@@ -1,5 +1,6 @@
 import {Component, ElementRef, Input, OnInit, EventEmitter, Output, ViewChild} from '@angular/core';
 import {COMMA, ENTER, SEMICOLON, SPACE} from '@angular/cdk/keycodes';
+import {DataService} from '../../shared/data.service';
 
 @Component({
   selector: 'app-tags',
@@ -18,8 +19,9 @@ export class TagsComponent implements OnInit {
   query = false;
   isValid = false;
 
-  constructor() {
+  constructor(private dataService: DataService) {
     this.pushTags = new EventEmitter<string[]>();
+    this.dataService.reset.subscribe(_ => this.tags = []);
   }
 
   ngOnInit(): void {
@@ -91,4 +93,7 @@ export class TagsComponent implements OnInit {
     }
   }
 
+  onRemove(): void {
+    this.tags = [];
+  }
 }

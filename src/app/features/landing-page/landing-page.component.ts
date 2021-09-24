@@ -17,13 +17,10 @@ export class LandingPageComponent implements OnInit {
       { value: 'settings', routerLink: 'settings' }
     ];
 
-  constructor( private translateService: TranslateService ) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.navBarItems.forEach(item => {
-
-    });
   }
 
 }
